@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B369D3;
+}
+
+.addres {
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    color: purple;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 5px;
+    background-color: #fbdf5a;
+    font-size: 30px;
+}
+
+.player {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.playerone,
+.playertwo, 
+.reload {
+    background-color: #fbdf5a;
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    width: 25%;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.reload {
+    width: 10%;
+    cursor: pointer;
+}
+
+.reload:hover .r {
+    animation-name: reload;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes reload {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    color: white;
+    font-size: 50px;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    height: calc(100vh - 270px);
+}
+
+@media (max-width: 767px) {
+    .addres {
+        width: 90%;
+        font-size: 25px;
+        padding: 10px;
+    }
+    .playerone,
+    .playertwo,
+    .reload {
+        font-size: 20px;
+        padding: 10px;
+        width: 75%;
+        margin-left: 0px;
+    }
+    .reload {
+        width: 25%;
+    }
+    .container {
+        height: 400px;
+    }
+    .player {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .container i {
+        position: absolute;
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        position: absolute;
+        left: 450px;
+        grid-template-columns: repeat(3, minmax(300px, 300px));
+    }
+}
+
+.container .styel {
+    background-color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container i {
+    position: absolute;
+}
+
+.container div:first-child{
+    border-top-left-radius: 45px;
+}
+.container div:last-child {
+    border-bottom-right-radius: 45px;
+}
+.container div:nth-child(3) {
+    border-top-right-radius: 45px;
+}
+.container div:nth-child(7) {
+    border-bottom-left-radius: 45px;
+}
+
+.o1 {
+    width: 680px;
+    height: 30px;
+    position: absolute;
+    background-color: rgb(212, 201, 181);
+    left: 610px;
+    bottom: 340px;
+    border-radius: 20px;
+}
